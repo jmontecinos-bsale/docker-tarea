@@ -1,6 +1,5 @@
 FROM nginx:alpine
 
-#Copiar archivos // directorio por defecto de nginx
-COPY index.html app.js /usr/share/nginx/html/
+COPY default.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+COPY . /usr/share/nginx/html/

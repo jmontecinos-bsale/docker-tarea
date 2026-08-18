@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const textContainer = document.getElementById('response');
 
     try {
-        const response = await fetch('http://localhost:3000/docker-api');
+        const response = await fetch('/docker-api');
         const data = await response.json();
 
         textContainer.innerText = data.msg;

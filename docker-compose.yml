@@ -1,0 +1,17 @@
+#Los contenedores que forman la app
+services:
+  # Contenedor 1
+  server:
+    container_name: app-server
+    build: ./server
+    # No añado el port aquí porque ya está en el dockerfile
+    command: npm start
+
+  client:
+    container_name: app-client
+    build: ./client
+    ports:
+      - "8080:80"
+    # Espera a que el contenedor del server haya iniciado primero
+    depends_on:
+      - server
