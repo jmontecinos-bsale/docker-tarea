@@ -9,4 +9,4 @@ app.get('/docker-api', (req, res) => {
     res.json({msg: '¡Hola! Saludos desde el backend :)'})
 });
 
-app.listen(SERVER_PORT, () => console.log(`Backend running on port ${SERVER_PORT}`));
+app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
