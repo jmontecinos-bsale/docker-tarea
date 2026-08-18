@@ -17,8 +17,5 @@ RUN npm i
 #Se copia el resto del código al directorio source/destiny
 COPY . . 
 
-#Definir puerto
-EXPOSE 3000
-
 #Comando a ejecutar al iniciar el contenedor
 CMD [ "npm", "start" ]
